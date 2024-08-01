@@ -17,7 +17,7 @@ public class FcmService {
                 .setToken(sendNotificationDto.getToken())
                 .setNotification(Notification.builder()
                         .setTitle(sendNotificationDto.getTitle())
-                        .setTitle(sendNotificationDto.getTitle())
+                        .setBody(sendNotificationDto.getBody())
                         .build()
                 )
                 .build();
@@ -25,4 +25,6 @@ public class FcmService {
 
         return FirebaseMessaging.getInstance().send(message);
     }
+
+
 }
